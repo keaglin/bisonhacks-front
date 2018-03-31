@@ -13,7 +13,7 @@ const Landing = () => (
           <h5 className='slogan'>Empower yourself to donate to those most in need</h5>
         </header>
         <main>
-          
+        
         </main>
       </div>
     </React.Fragment>
