@@ -1,14 +1,24 @@
 .landing {
-  min-height: 100vh;
+  min-height: 150vh;
   min-width: 100vh;
   background: url('https://github.com/keaglin/bisonhacks-front/blob/landing/public/images/background.png?raw=true') no-repeat;
   background-size: cover; 
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* padding-bottom: -150px; */
+}
+/* #root {
+  padding-bottom: -150px;
+} */
+.greeting {
+  margin: 60vh 0 0 0;
 }
 
-.heading {
+.logo {
+  font-size: 72px;
+}
 
-  
+.slogan {
+  font-size: 36px;
 }
