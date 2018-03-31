@@ -3,9 +3,9 @@ import { Switch, Route }    from 'react-router-dom'
 import Header               from '../Header/Header'
 import Footer               from '../Footer/Footer'
 import Landing              from '../Landing/Landing'
-import Donate               from '../Donate/Donate'
+import DonateContainer      from '../DonateContainer/DonateContainer'
+import DonateList           from '../DonateList/DonateList'
 // import Map                  from '../Map/Map'
-import Results               from '../Results/Results'
 import './App.css'
 
 class App extends Component {
@@ -16,10 +16,10 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path='/' render={() => <Landing />} />
-            <Route path='/donate' render={() => <Donate />} />
+            <Route path='/donate' render={() => <DonateContainer />} />
+            <Route path='/results' render={(props) => (<DonateList {...props} />)} />
             {/* <Route path='/test' render={() => <Map />} /> */}
             {/* <Route path='/test' render={() => <Map />} /> */}
-            <Route exact path='/results' render={(props) => (<Results {...props} />)} />
           </Switch>  
         </main>
         {/* <Footer /> */}
