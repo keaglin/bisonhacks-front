@@ -16,39 +16,39 @@ class Login extends Component {
         login: false
     }
 
-    // handleGmail = (e) => {
-    //     let provider = new firebase.auth.GoogleAuthProvider()
-    //     const gmailAuth = firebase.auth().signInWithPopup(provider) 
-    //     .then(result => {
-    //         let token = result.credential.accessToken
-    //         let secret = result.credential.secret
-    //         let user = result.user
-    //         console.log(user)
-    //     })  
-    //     .catch(err => {
-    //         let errCode = err.code
-    //         let errMessage = err.message
-    //         let email = err.email
-    //         let credential = err.credential
-    //     })
-    // }
+    handleGmail = (e) => {
+        let provider = new firebase.auth.GoogleAuthProvider()
+        const gmailAuth = firebase.auth().signInWithPopup(provider) 
+        .then(result => {
+            let token = result.credential.accessToken
+            let secret = result.credential.secret
+            let user = result.user
+            console.log(user)
+        })  
+        .catch(err => {
+            let errCode = err.code
+            let errMessage = err.message
+            let email = err.email
+            let credential = err.credential
+        })
+    }
 
-    // handleTwitter = (e) => {
-    //     let provider = new firebase.auth.TwitterAuthProvider()
-    //     const twitterAuth = firebase.auth().signInWithPopup(provider) 
-    //     .then(result => {
-    //         let token = result.credential.accessToken
-    //         let secret = result.credential.secret
-    //         let user = result.user
-    //         console.log(user)
-    //     })  
-    //     .catch(err => {
-    //         let errCode = err.code
-    //         let errMessage = err.message
-    //         let email = err.email
-    //         let credential = err.credential
-    //     })
-    // }
+    handleTwitter = (e) => {
+        let provider = new firebase.auth.TwitterAuthProvider()
+        const twitterAuth = firebase.auth().signInWithPopup(provider) 
+        .then(result => {
+            let token = result.credential.accessToken
+            let secret = result.credential.secret
+            let user = result.user
+            console.log(user)
+        })  
+        .catch(err => {
+            let errCode = err.code
+            let errMessage = err.message
+            let email = err.email
+            let credential = err.credential
+        })
+    }
 
     handleFacebook = (e) => {
         let provider = new firebase.auth.FacebookAuthProvider()
