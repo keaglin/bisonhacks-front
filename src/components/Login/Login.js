@@ -16,26 +16,43 @@ class Login extends Component {
         login: false
     }
 
-    handleGmail = (e) => {
-        let provider = new firebase.auth.GoogleAuthProvider()
-        const gmailAuth = firebase.auth().signInWithPopup(provider) 
-        .then(result => {
-            let token = result.credential.accessToken
-            let secret = result.credential.secret
-            let user = result.user
-            console.log(user)
-        })  
-        .catch(err => {
-            let errCode = err.code
-            let errMessage = err.message
-            let email = err.email
-            let credential = err.credential
-        })
-    }
+    // handleGmail = (e) => {
+    //     let provider = new firebase.auth.GoogleAuthProvider()
+    //     const gmailAuth = firebase.auth().signInWithPopup(provider) 
+    //     .then(result => {
+    //         let token = result.credential.accessToken
+    //         let secret = result.credential.secret
+    //         let user = result.user
+    //         console.log(user)
+    //     })  
+    //     .catch(err => {
+    //         let errCode = err.code
+    //         let errMessage = err.message
+    //         let email = err.email
+    //         let credential = err.credential
+    //     })
+    // }
 
-    handleTwitter = (e) => {
-        let provider = new firebase.auth.TwitterAuthProvider()
-        const twitterAuth = firebase.auth().signInWithPopup(provider) 
+    // handleTwitter = (e) => {
+    //     let provider = new firebase.auth.TwitterAuthProvider()
+    //     const twitterAuth = firebase.auth().signInWithPopup(provider) 
+    //     .then(result => {
+    //         let token = result.credential.accessToken
+    //         let secret = result.credential.secret
+    //         let user = result.user
+    //         console.log(user)
+    //     })  
+    //     .catch(err => {
+    //         let errCode = err.code
+    //         let errMessage = err.message
+    //         let email = err.email
+    //         let credential = err.credential
+    //     })
+    // }
+
+    handleFacebook = (e) => {
+        let provider = new firebase.auth.FacebookAuthProvider()
+        const facebookAuth = firebase.auth().signInWithPopup(provider) 
         .then(result => {
             let token = result.credential.accessToken
             let secret = result.credential.secret
@@ -48,17 +65,19 @@ class Login extends Component {
             let email = err.email
             let credential = err.credential
         })
-    }
+    } 
 
     render () {
         return (
             <div className='login'>
                 <h2>Login</h2>
                 <input className='gmail-button' type='button' value='Login With Gmail' onClick={this.handleGmail} />
-                <input className='facebook-button' type='button' value='Login With Facebook' onClick={this.handleGmail} />
+                <input className='facebook-button' type='button' value='Login With Facebook' onClick={this.handleFacebook} />
                 <input className='twitter-button' type='button' value='Login With Twitter' onClick={this.handleTwitter} />
             </div>
         )
+
+        // fb add a new app create app settings basics
 // make this LoginPage where users can press buttons and log in different way
 // make new login where after user logged in using a method {login: true}
 // make it once logged in header changes to no longer show signin/registration tabs

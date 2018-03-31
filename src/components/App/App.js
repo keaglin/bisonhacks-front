@@ -17,6 +17,8 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path='/' render={() => <Landing />} />
+            <Route path='/home' render={() => <Landing />} />
+            {/* <Route path='/about' render={( => <About />)} /> */}
             <Route path='/donate' render={() => <DonateContainer />} />
             <Route path='/results' render={(props) => (<DonateList {...props} />)} />
             <Route path='/login' render={() => <Login />} />

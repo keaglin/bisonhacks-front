@@ -9,8 +9,8 @@ const Landing = () => (
     <React.Fragment>
       <div className='landing white-text'> 
         <header className='heading'>
-          <h3 className='logo'>When It Matters</h3>
-          <h5 className='slogan'>Empower yourself to donate to those most in need</h5>
+          <h3 className='logo'>Where It Matters</h3>
+          <h5 className='slogan'>Make it count</h5>
         </header>
       </div>
     </React.Fragment>
