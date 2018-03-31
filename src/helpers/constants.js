@@ -1,0 +1,1 @@
+export const SEARCH_URL = 'data.orghunter.com/v1/charitygeolocation?user_key=ae2edca2f274574c738272ee10158006&searchTerm='
