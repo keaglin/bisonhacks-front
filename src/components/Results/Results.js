@@ -6,11 +6,17 @@ const Results = () => {
   return (
     <div>
 
-    <h3> Donation Centers </h3>
-
-    <h5> List </h5>
-
-    <h5> Map View </h5>
+    <div class="row">
+      <div class="col s12">
+          <h3> Donation Centers </h3>
+      </div>
+      <div class="col s6">
+      <h5 class=''> List </h5>
+      </div>
+      <div class="col s6">
+       <h5 class=''> Map View </h5>
+      </div>
+    </div>
 
     </div>
   )

@@ -3,7 +3,8 @@ import { Switch, Route }    from 'react-router-dom'
 import Header               from '../Header/Header'
 import Footer               from '../Footer/Footer'
 import Landing              from '../Landing/Landing'
-import Map                  from '../Map/Map'
+import Results               from '../Results/Results'
+// import Map                  from '../Map/Map'
 import './App.css'
 
 
@@ -15,7 +16,7 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path='/' render={() => <Landing />} />
-            <Route path='/test' render={() => <Map />} />
+            {/* <Route path='/test' render={() => <Map />} /> */}
             <Route exact path='/results' render={() => (<Results />)} />
           </Switch>  
         </main>
