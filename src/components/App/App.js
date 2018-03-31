@@ -3,6 +3,7 @@ import { Switch, Route }    from 'react-router-dom'
 import Header               from '../Header/Header'
 import Footer               from '../Footer/Footer'
 import Landing              from '../Landing/Landing'
+import Donate               from '../Donate/Donate'
 import Map                  from '../Map/Map'
 import './App.css'
 
@@ -15,6 +16,7 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path='/' render={() => <Landing />} />
+            <Route path='/donate' render={() => <Donate />} />
             <Route path='/test' render={() => <Map />} />
           </Switch>  
         </main>
