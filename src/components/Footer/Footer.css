@@ -1,3 +1,7 @@
 .footer-list {
-    list-style: none;
+  list-style: none;
+}
+
+footer {
+  font-size: 16px !important;
 }
