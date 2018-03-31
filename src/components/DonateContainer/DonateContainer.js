@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { SEARCH_URL }  from 'helpers/constants'
+import { SEARCH_URL }  from '../../helpers/constants'
 import axios from 'axios'
 
 class DonateContainer extends Component {
