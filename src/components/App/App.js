@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route }    from 'react-router-dom'
+import Header               from '../Header/Header'
+import Footer               from '../Footer/Footer'
+import Landing              from '../Landing/Landing'
+import Map                  from '../Map/Map'
 import './App.css'
-import Header  from "../Header/Header"
-import Footer from "../Footer/Footer"
 
 
 class App extends Component {
@@ -10,9 +12,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          <Switch>
+            <Route exact path='/' render={() => <Landing />} />
+            <Route path='/test' render={() => <Map />} />
+          </Switch>  
+        </main>
         <Footer />
       </div>
     )
