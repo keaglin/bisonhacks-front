@@ -5,6 +5,7 @@ import Footer               from '../Footer/Footer'
 import Landing              from '../Landing/Landing'
 import DonateContainer      from '../DonateContainer/DonateContainer'
 import DonateList           from '../DonateList/DonateList'
+import About                from '../About/About'
 // import Map                  from '../Map/Map'
 import './App.css'
 import Login from '../Login/Login'
@@ -18,10 +19,10 @@ class App extends Component {
           <Switch>
             <Route exact path='/' render={() => <Landing />} />
             <Route path='/home' render={() => <Landing />} />
-            {/* <Route path='/about' render={( => <About />)} /> */}
+            <Route path='/about' render={() => <About />} />
             <Route path='/donate' render={() => <DonateContainer />} />
             <Route path='/results' render={(props) => (<DonateList {...props} />)} />
-            {/* <Route path='/login' render={() => <Login />} /> */}
+            <Route path='/login' render={() => <Login />} />
             {/* <Route path='/test' render={() => <Map />} /> */}
           </Switch> 
           {/* <Login /> */}

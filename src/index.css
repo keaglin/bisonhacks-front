@@ -3,8 +3,14 @@ nav {
   background-color: #B5838D !important;
 }
 
+nav ul a:hover {
+  color: #B5838D !important;
+  background-color: white !important;
+}
+
 footer {
   background-color: #B5838D !important; 
+  font-size: 14px !important;
 }
 
 body {
