@@ -19,7 +19,7 @@ class App extends Component {
             <Route exact path='/' render={() => <Landing />} />
             <Route path='/donate' render={() => <DonateContainer />} />
             <Route path='/results' render={(props) => (<DonateList {...props} />)} />
-            <Route path='/login' render={() => <Login />} />
+            {/* <Route path='/login' render={() => <Login />} /> */}
             {/* <Route path='/test' render={() => <Map />} /> */}
           </Switch> 
         </main>

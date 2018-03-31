@@ -8,9 +8,9 @@ import './Landing.css'
 const Landing = () => (
     <React.Fragment>
       <div className='row landing white-text'> 
-      <div className='col s12'>
-          <h3 className='logo'>When It Matters</h3>
-          <h5 className='slogan'>Empower yourself to donate to those most in need</h5>
+        <div className='col s12 greeting'>
+          <h3 className='logo col s12'>When It Matters</h3>
+          <h5 className='slogan col s12'>Empower yourself to donate to those most in need</h5>
         {/* </div>
         <div className='row'> */}
           <div className='col s12'>
