@@ -1,5 +1,4 @@
-import React from 'react'
-// import PropTypes from 'prop-types'
+import React, {Component} from 'react'
 import firebase from 'firebase'
 
 const firebaseApp = firebase.initializeApp({
@@ -7,49 +6,59 @@ const firebaseApp = firebase.initializeApp({
     authDomain: "bisonhacks-37a27.firebaseapp.com",
     databaseURL: "https://bisonhacks-37a27.firebaseio.com", 
 })
-var provider = new firebase.auth.TwitterAuthProvider()
 
  // create event handlers that grab user email and password
  //create event handlers that handle clicks and either register or login users
-const Login = props => {
-    // <div className='login'>
-    //     <h2>Login</h2>
-    //     <button className='gmail' onClick={() => props.authenticate('Gmail')}>
-    //         Login With Gmail
-    //     </button>
-    //     <button className='email' onClick={() => props.authenticate('Email')}>
-    //         Login With Email
-    //     </button>
-    // </div>
-    
-    // var provider = new firebase.auth.TwitterAuthProvider()
-    // <div>
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
-        // You can use these server side with your app's credentials to access the Twitter API.
-        var token = result.credential.accessToken;
-        var secret = result.credential.secret;
-        // The signed-in user info.
-        var user = result.user;
-        // ...
-      }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      })
-    // </div>
-    return (
-        <div></div>
-    )
-}
+class Login extends Component {
 
-// Login.propTypes = {
-//     authenticate: PropType.func.isRequired
-// }
+    state = {
+        login: false
+    }
+
+    handleGmail = (e) => {
+        var provider = new firebase.auth.GoogleAuthProvider()
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            let token = result.credential.accessToken
+            let secret = result.credential.secret
+            let user = result.user
+            console.log(user)
+        })  
+        .catch(function(error) {
+            let errorCode = error.code
+            let errorMessage = error.message
+            let email = error.email
+            let credential = error.credential
+        })
+    }
+
+    handleTwitter = (e) => {
+        let provider = new firebase.auth.TwitterAuthProvider()
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            let token = result.credential.accessToken
+            let secret = result.credential.secret
+            let user = result.user
+            console.log(user)
+        })  
+        .catch(function(error) {
+            let errorCode = error.code
+            let errorMessage = error.message
+            let email = error.email
+            let credential = error.credential
+        })
+    }
+
+    render () {
+        return (
+            <div className='login'>
+                <h2>Login</h2>
+                <input type='button' value='Login With Gmail' onClick={this.handleGmail} />
+                <input type='button' value='Login With Twitter' onClick={this.handleTwitter} />
+            </div>
+        )
+// make this LoginPage where users can press buttons and log in different way
+// make new login where after user logged in using a method {login: true}
+// make it once logged in header changes to no longer show signin/registration tabs
+    }
+}
 
 export default Login

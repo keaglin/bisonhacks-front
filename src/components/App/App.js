@@ -15,13 +15,14 @@ class App extends Component {
       <div className="App">
         {/* <Header /> */}
         <main>
-          <Switch>
+          {/* <Switch>
             <Route exact path='/' render={() => <Landing />} />
             <Route path='/donate' render={() => <DonateContainer />} />
             <Route path='/results' render={(props) => (<DonateList {...props} />)} />
-            <Route path='/login' render={() => <Login />} />
+            <Route path='/login' render={() => <Login />} /> */}
             {/* <Route path='/test' render={() => <Map />} /> */}
-          </Switch> 
+          {/* </Switch>  */}
+          <Login />
         </main>
         {/* <Footer /> */}
       </div>
