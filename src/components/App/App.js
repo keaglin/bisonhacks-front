@@ -7,7 +7,6 @@ import Donate               from '../Donate/Donate'
 import Map                  from '../Map/Map'
 import './App.css'
 
-
 class App extends Component {
   render() {
     return (
