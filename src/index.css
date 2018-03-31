@@ -1,9 +1,10 @@
-.nav-wrapper {
+nav {
+  box-shadow: none !important;
   background-color: #B5838D !important;
 }
 
-.page-footer {
-  background-color: #B5838D !important;
+footer {
+  background-color: #B5838D !important; 
 }
 
 body {
@@ -13,6 +14,5 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
