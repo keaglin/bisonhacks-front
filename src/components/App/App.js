@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route }    from 'react-router-dom'
+// import { Switch, Route }    from 'react-router-dom'
 import Header               from '../Header/Header'
 import Footer               from '../Footer/Footer'
 import Landing              from '../Landing/Landing'
@@ -7,6 +7,7 @@ import Donate               from '../Donate/Donate'
 // import Map                  from '../Map/Map'
 import Results               from '../Results/Results'
 import './App.css'
+import Login from '../Login/Login'
 
 class App extends Component {
   render() {
@@ -14,13 +15,13 @@ class App extends Component {
       <div className="App">
         {/* <Header /> */}
         <main>
-          <Switch>
-            <Route exact path='/' render={() => <Landing />} />
-            <Route path='/donate' render={() => <Donate />} />
+          {/* <Switch> */}
+            {/* <Route exact path='/' render={() => <Landing />} />
+            <Route path='/donate' render={() => <Donate />} /> */}
             {/* <Route path='/test' render={() => <Map />} /> */}
-            {/* <Route path='/test' render={() => <Map />} /> */}
-            <Route exact path='/results' render={() => (<Results />)} />
-          </Switch>  
+            {/* <Route exact path='/results' render={(props) => (<Results {...props} />)} />
+          </Switch>   */}
+          <Login />
         </main>
         {/* <Footer /> */}
       </div>
