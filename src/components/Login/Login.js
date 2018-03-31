@@ -48,18 +48,6 @@ class Login extends Component {
             let email = err.email
             let credential = err.credential
         })
-        // firebase.auth().signInWithPopup(provider).then(function(result) {
-        //     let token = result.credential.accessToken
-        //     let secret = result.credential.secret
-        //     let user = result.user
-        //     console.log(user)
-        // })  
-        // .catch(function(error) {
-        //     let errorCode = error.code
-        //     let errorMessage = error.message
-        //     let email = error.email
-        //     let credential = error.credential
-        // })
     }
 
     render () {
