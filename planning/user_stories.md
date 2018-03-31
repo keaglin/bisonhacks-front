@@ -12,3 +12,5 @@ condition?
     list of locations
   not wearable? ->
     recycling centers near you
+
+

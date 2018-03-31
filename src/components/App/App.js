@@ -1,18 +1,28 @@
 import React, { Component } from 'react'
+import { Switch, Route }    from 'react-router-dom'
+import Header               from '../Header/Header'
+import Footer               from '../Footer/Footer'
+import Landing              from '../Landing/Landing'
+import Donate               from '../Donate/Donate'
+// import Map                  from '../Map/Map'
+import Results               from '../Results/Results'
 import './App.css'
-import Footer from '../Footer/Footer'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Footer />
+        {/* <Header /> */}
+        <main>
+          <Switch>
+            <Route exact path='/' render={() => <Landing />} />
+            <Route path='/donate' render={() => <Donate />} />
+            {/* <Route path='/test' render={() => <Map />} /> */}
+            {/* <Route path='/test' render={() => <Map />} /> */}
+            <Route exact path='/results' render={() => (<Results />)} />
+          </Switch>  
+        </main>
+        {/* <Footer /> */}
       </div>
     )
   }
