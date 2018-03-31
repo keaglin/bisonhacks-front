@@ -1,9 +1,14 @@
 .landing {
   min-height: 100vh;
   min-width: 100vh;
-  background: url('') no-repeat;
+  background: url('https://github.com/keaglin/bisonhacks-front/blob/landing/public/images/background.png?raw=true') no-repeat;
   background-size: cover; 
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.heading {
+
+  
 }
