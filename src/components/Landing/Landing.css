@@ -1,0 +1,9 @@
+.landing {
+  min-height: 100vh;
+  min-width: 100vh;
+  background: url('') no-repeat;
+  background-size: cover; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
