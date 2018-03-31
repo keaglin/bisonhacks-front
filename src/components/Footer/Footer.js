@@ -22,7 +22,7 @@ const Footer = () => (
         {/* </div> */}
         <div className="footer-copyright">
             <div className="container">
-                © 2018 Copyright Text
+                © 2018 Copyright
                 <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
