@@ -1,0 +1,27 @@
+.gmail-button {
+    background: #db3236;
+    color: white;
+    height: 5vh;
+    width: 25vw;
+    display: block;
+    margin: 1vh auto;
+}
+
+.facebook-button {
+    background: #3b5998;
+    color: white;
+    height: 5vh;
+    width: 25vw;
+    display: block;
+    margin: 1vh auto;
+}
+
+.twitter-button {
+    background: #00aced;
+    color: white;
+    height: 5vh;
+    width: 25vw;
+    display: block;
+    margin: 1vh auto;
+}
+
