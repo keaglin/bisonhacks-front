@@ -3,6 +3,6 @@
 KL: Landing page & Pitch
 
 #Saturday Todo:
-[] Stats on Goodwill and Red Cross
+[] Stats on Goodwill, Red Cross, Salvation Army
 [] Create Readme
 [] Overall Styling 
