@@ -1,0 +1,27 @@
+[
+  {
+    "name": "YMCA of the USA",
+    "category": "Social Services",
+    "percentage": "87.4"
+  },
+  {
+    "name": "Catholic Charities USA",
+    "category": "Social Services",
+    "percentage": "79.6"
+  },
+  {
+    "name": "Boys & Girls Club of America",
+    "category": "Youth",
+    "percentage": "85.1"
+  },
+  {
+    "name": "Easter Seals",
+    "category": "Health",
+    "percentage": "80.6"
+  },
+  {
+    "name": "The Nature Conservancy",
+    "category": "Environmental",
+    "percentage": "78.8"
+  }
+]
