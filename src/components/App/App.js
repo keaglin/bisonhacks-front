@@ -4,7 +4,8 @@ import Header               from '../Header/Header'
 import Footer               from '../Footer/Footer'
 import Landing              from '../Landing/Landing'
 import Donate               from '../Donate/Donate'
-import Map                  from '../Map/Map'
+// import Map                  from '../Map/Map'
+import Results               from '../Results/Results'
 import './App.css'
 
 class App extends Component {
@@ -17,6 +18,8 @@ class App extends Component {
             <Route exact path='/' render={() => <Landing />} />
             <Route path='/donate' render={() => <Donate />} />
             <Route path='/test' render={() => <Map />} />
+            {/* <Route path='/test' render={() => <Map />} /> */}
+            <Route exact path='/results' render={() => (<Results />)} />
           </Switch>  
         </main>
         {/* <Footer /> */}
