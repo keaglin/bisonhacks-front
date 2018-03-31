@@ -2,22 +2,21 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Results.css'
 
-const Results = () => {
+const Results = (props) => {
+  console.log('location state is', props.location.state.donate)
   return (
-    <div>
-
-    <div class="row">
-      <div class="col s12">
-          <h3> Donation Centers </h3>
+    <div className="row">
+      <div className="col s12">
+          <h3> 
+          {props.location.state.donate ? 'Donation ' : 'Recycling '} 
+          Centers </h3>
       </div>
-      <div class="col s6">
-      <h5 class=''> List </h5>
+      <div className="col s6">
+      <h5 className=''> List </h5>
       </div>
-      <div class="col s6">
-       <h5 class=''> Map View </h5>
+      <div className="col s6">
+       <h5 className=''> Map View </h5>
       </div>
-    </div>
-
     </div>
   )
 }
