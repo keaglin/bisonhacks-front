@@ -1,5 +1,5 @@
 .landing {
-  min-height: 150vh;
+  min-height: 100vh;
   min-width: 100vh;
   background: url('https://github.com/keaglin/bisonhacks-front/blob/landing/public/images/background.png?raw=true') no-repeat;
   background-size: cover; 
