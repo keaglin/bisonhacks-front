@@ -33,6 +33,3 @@ an app should open on localhost:3000
 
 ### Reflection
 We created this app to help ensure that resources were getting into the hands of people that truly needed them. Seeing organizations pump hundreds of thousands and even millions into the c-level executive's pockets and re-selling resources for a profit is something that pulled heavy at our hearts. While working in the environment of a hackathon time and resources are limited, we plan on continuing the growth of this project to help alleviate issues in our community, as well as ensure that when people who are better off go to help, that they actually make it count. 
-
-
-I planned on building this app that allowed users to upload clothing items and their name, colors, images, and tags. I then wanted users to be able to add items to a "stack" in which they could say what category clothes belonged in. I decided the best thing to do was add a category feature and build 4 models for Accessories, Shirts, Pants, and Shoes. This feature actually made the project a taller task than expected as it required 4 schemas, 4 databases, and 4 times the routes.
