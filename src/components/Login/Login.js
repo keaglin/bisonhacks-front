@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+// import PropTypes from 'prop-types'
 import firebase from 'firebase'
 import './Login.css'
 
@@ -86,4 +87,16 @@ class Login extends Component {
     }
 }
 
+// const Login = (props) => (
+//   <nav className="login">
+// 		<h2>Login</h2>
+// 		<button className="email" onClick={() => props.authenticate('Email')}>Log In With Email</button>
+// 		<button className="twitter" onClick={() => props.authenticate('Twitter')}>Log In With Twitter</button>
+// 		<button className="facebook" onClick={() => props.authenticate('Facebook')}>Log In With Facebook</button>
+// 	</nav>
+// )
+
+Login.propTypes = {
+  authenticate: PropTypes.func.isRequired
+}
 export default Login
