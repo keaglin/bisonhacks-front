@@ -96,7 +96,7 @@ class Login extends Component {
 // 	</nav>
 // )
 
-Login.propTypes = {
-  authenticate: PropTypes.func.isRequired
-}
+// Login.propTypes = {
+//   authenticate: PropTypes.func.isRequired
+// }
 export default Login
