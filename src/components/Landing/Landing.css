@@ -1,11 +1,11 @@
 .landing {
   min-height: 100vh;
-  min-width: 100vh;
-  background: url('https://github.com/keaglin/bisonhacks-front/blob/landing/public/images/background.png?raw=true') no-repeat;
+  /* min-width: 100vh; */
+  background: url('https://images.unsplash.com/photo-1446501356021-84cf6b450d07') no-repeat;
   background-size: cover; 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   padding-top: 45vh;
 }
 
@@ -15,3 +15,4 @@
 .slogan {
   font-size: 48px;
 }
+

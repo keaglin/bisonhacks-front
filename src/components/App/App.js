@@ -4,7 +4,6 @@ import Header               from '../Header/Header'
 import Footer               from '../Footer/Footer'
 import Landing              from '../Landing/Landing'
 import DonateContainer      from '../DonateContainer/DonateContainer'
-import DonateList           from '../DonateList/DonateList'
 import About                from '../About/About'
 import { SEARCH_URL }  from '../../helpers/constants'
 import axios from 'axios'
@@ -21,26 +20,15 @@ class App extends Component {
   }
 
   getCenters = search => {
-    // do the search and put what we need in state for displaying
-    // console.log('search term is', this.state.searchTerm)
-    // console.log('full search link', SEARCH_URL + this.state.searchTerm)
+    // 1. do the search and put what we need in state for displaying results
+
+    // can worry about this stuff later
     // if it's damaged, get a list of recycling centers
     // if it's not, get a list of donation sites
-    // axios.post(`${SEARCH_URL}` + `${this.state.searchTerm}`, )
-    // .then(res => this.setState({centers: res.data}))
 
-    axios.post(`${SEARCH_URL}` + `${search}`
-        // type: 'GET',
-        // dataType: 'jsonp',
-        // cors: true ,
-        // contentType:'application/json',
-        // secure: true,
-        //           headers: {
-        //               'Access-Control-Allow-Origin': '*',
-        //           }}
-    )
-    .then(res => this.setState({centers: res.data}))
-    .catch(err => console.log('An error occurred', err))
+    axios.post(`${SEARCH_URL}${search}`)
+      .then(res => this.setState({centers: res.data}))
+      .catch(err => console.log('An error occurred', err))
   }
 
   render() {
@@ -53,7 +41,8 @@ class App extends Component {
             {/* <Route path='/home' render={() => <Landing />} /> */}
             <Route path='/about' render={() => <About />} />
             <Route path='/donate' render={() => <DonateContainer getCenters={this.getCenters} />} />
-            <Route path='/results' render={props => (<DonateList {...props} />)} />
+            {/* Only DonateContainer should be calling DonateList because that's the only way a search will have been performed */}
+            {/* <Route path='/results' render={props => (<DonateList {...props} />)} /> */}
             <Route path='/login' render={() => <Login />} />
             {/* <Route path='/test' render={() => <Map />} /> */}
           </Switch> 
