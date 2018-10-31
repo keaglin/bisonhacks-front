@@ -9,6 +9,9 @@
 # production
 /build
 
+# secrets
+secrets.md
+
 # misc
 .DS_Store
 .env.local
