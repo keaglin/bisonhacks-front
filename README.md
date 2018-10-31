@@ -1,7 +1,7 @@
 # Where It Matters
 
 ### About
-Where it matters is an application that allows users to find smaller local organizations that contribute a larger percentage of resources to the people that need them to donate to. Many large organizations give high salaries to many of their c-level executives that account for a large percentage of monetary donations. We hope to empower users to ensure that when they donate that they make it count.
+Where it matters is an application that allows users to find organizations that contribute a larger percentage of resources to the people that need them. Many large organizations give high salaries to many of their c-level executives that account for a large percentage of monetary donations. We hope to empower users to ensure that when they donate their time and money, they can make it count.
 
 ### Future Features
 Map API & Search: Allow you to search by name, city, state, zip code, category, type of organization.

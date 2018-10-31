@@ -10,7 +10,7 @@
 /build
 
 # secrets
-secrets.md
+secrets.*
 
 # misc
 .DS_Store
