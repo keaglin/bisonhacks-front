@@ -2,7 +2,8 @@
 // and even after we pass these, we need to build the request link from form data
 // before we POST 
 
-import { ORGHUNTER } from "./secrets";
+import ORGHUNTER from "./secrets"
+
 export const LOCATION = `https://data.orghunter.com/v1/charitygeolocation?user_key=${ORGHUNTER}`
 // Take 2 params (API key and Charity EIN [which we'll prob have gotten from the search]) and returns detailed info about 1 specific charity
 
