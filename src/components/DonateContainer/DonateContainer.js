@@ -3,7 +3,6 @@ import 'materialize-css/dist/css/materialize.min.css'
 import M from 'materialize-css'
 import './DonateContainer.css'
 
-
 class DonateContainer extends React.Component {
   einRef = React.createRef()
   searchTermRef = React.createRef()
@@ -28,24 +27,7 @@ class DonateContainer extends React.Component {
   }
 
   createSearch = (e) => {
-    // debugger
-    // this is where we gonna get what we need from the form to compose the user-input part of the search link
     e.preventDefault()
-    // link format
-    // &ein=${this.einRef.current.value}
-    // &searchTerm=${this.searchTermRefeinRef.current.value}
-    // &city=${this.cityRefeinRef.current.value}
-    // &state=${this.stateRefeinRef.current.value}
-    // &zipCode=${this.zipCodeRefeinRef.current.value}
-    // &form990_amount_min=${this.form990_amount_minRefeinRef.current.value}
-    // &form990_amount_max=${this.form990_amount_maxRefeinRef.current.value}
-    // &latitude=${this.latitudeRefeinRef.current.value}
-    // &longitude=${this.longitudeRefeinRef.current.value}
-    // &distance=${this.distanceRefeinRef.current.value}
-    // &category=${this.categoryRefeinRef.current.value}
-    // &eligibl=${this.eligiblRefeinRef.current.value}
-    // &rows=${this.rowsRefeinRef.current.value}
-    // &start=${this.startRefeinRef.current.value}
     const inputs = [
       {ein: this.einRef.current && this.einRef.current.value ? this.einRef.current.value : null},
       {searchTerm: this.searchTermRef.current && this.searchTermRef.current.value ? this.searchTermRef.current.value : null},
@@ -64,36 +46,16 @@ class DonateContainer extends React.Component {
     ]
     let searchArr = []
     inputs.forEach(i => { 
-      // console.log('stringified', JSON.stringify(i))
-      // console.log('tryna get the one key lol', Object.keys(i)[0])
       if (i[Object.keys(i)[0]] !== null) searchArr.push(`&${Object.keys(i)[0]}=${i[Object.keys(i)[0]]}`)
     })
     
-    
-    // console.log('inputs is', inputs)
-    // console.log('searchTermRef is', this.searchTermRef)
-    // console.log('cityRef is', this.cityRef)
-    // console.log('stateRef is', this.stateRef)
-    // console.log('zipCodeRef is', this.zipCodeRef)
-    // console.log('form990_amount_minRef is', this.form990_amount_minRef)
-    // console.log('form990_amount_maxRef is', this.form990_amount_maxRef)
-    // console.log('latitudeRef is', this.latitudeRef)
-    // console.log('longitudeRef is', this.longitudeRef)
-    // console.log('distanceRef is', this.distanceRef)
-    // console.log('categoryRef is', this.categoryRef)
-    // console.log('eligiblRef is', this.eligiblRef)
-    // console.log('rowsRef is', this.rowsRef)
-    // console.log('startRef is', this.startRef)
-    // console.log('einRef.current.value boolean is', !!this.einRef.current.value)
-    console.log('searchArr is', searchArr)
+    // console.log('searchArr is', searchArr)
     const search = searchArr.join('')
     // console.log('search is', search)
     this.props.getCenters(search)
     e.currentTarget.reset()
   }
   render() {
-    // let centers = this.state.centers
-    // console.log(centers)
     return (
       <div>
         <div className="row">
@@ -220,27 +182,7 @@ class DonateContainer extends React.Component {
                 {/* <input type="text" name="rows" ref={this.rowsRef} placeholder="rows" />
                 <input type="text" name="start" ref={this.startRef} placeholder="start" /> */}
               </div>
-              {/* <div className="input-field col s4 offset-s4">
-                <input placeholder="What state are you in? (2 letter abbreviation)" id="location" type="text" />
-                <label htmlFor="location">Location</label>
-              </div> */}
             </div>
-            {/* <div className="row">
-              <div className="col s4 offset-s4">
-                <p>
-                  <label htmlFor="damage">
-                    <input id="damage" type="radio" />
-                    <span>Yes</span>
-                  </label>
-                </p>
-                <p>
-                  <label htmlFor="damage">
-                    <input id="damage" type="radio" checked />
-                    <span>No</span>
-                  </label>
-                </p>
-              </div>
-            </div> */}
             <div className="col s4 offset-s4">
               <input type="submit" className="btn" />
             </div>
