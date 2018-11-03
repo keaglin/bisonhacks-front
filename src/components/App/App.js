@@ -26,10 +26,11 @@ class App extends Component {
     // if it's damaged, get a list of recycling centers
     // if it's not, get a list of donation sites
 
-    console.log(`${SEARCH_URL}${search}`)
-    // axios.post(`${SEARCH_URL}${search}`)
-    //   .then(res => this.setState({centers: res.data}))
-    //   .catch(err => console.log('An error occurred', err))
+    // console.log(`${SEARCH_URL}${search}`)
+    axios.post(`${SEARCH_URL}${search}`)
+      .then(res => console.log('res is', res))
+      // .then(res => this.setState({centers: res.data}))
+      .catch(err => console.log('An error occurred', err))
   }
 
   render() {
