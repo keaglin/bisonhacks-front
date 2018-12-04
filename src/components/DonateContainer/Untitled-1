@@ -1,0 +1,15 @@
+user_key	string	required	Your API Key
+ein
+searchTerm
+city
+state
+zipCode
+form990_amount_min
+form990_amount_max
+latitude
+longitude
+distance
+category
+eligibl
+rows
+start
