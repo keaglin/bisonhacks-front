@@ -52,7 +52,7 @@ class DonateContainer extends React.Component {
     // console.log('searchArr is', searchArr)
     const search = searchArr.join('')
     // console.log('search is', search)
-    this.props.getCenters(search)
+    // this.props.getCenters(search)
     e.currentTarget.reset()
   }
   render() {
