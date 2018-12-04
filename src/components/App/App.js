@@ -19,19 +19,19 @@ class App extends Component {
     // not sure what we were doing here lol
   }
 
-  getCenters = search => {
-    // 1. do the search and put what we need in state for displaying results
+  // getCenters = search => {
+  //   // 1. do the search and put what we need in state for displaying results
 
-    // can worry about this stuff later
-    // if it's damaged, get a list of recycling centers
-    // if it's not, get a list of donation sites
+  //   // can worry about this stuff later
+  //   // if it's damaged, get a list of recycling centers
+  //   // if it's not, get a list of donation sites
 
-    // console.log(`${SEARCH_URL}${search}`)
-    axios.post(`${SEARCH_URL}${search}`)
-      .then(res => console.log('res is', res))
-      // .then(res => this.setState({centers: res.data}))
-      .catch(err => console.log('An error occurred', err))
-  }
+  //   // console.log(`${SEARCH_URL}${search}`)
+  //   axios.post(`${SEARCH_URL}${search}`)
+  //     .then(res => console.log('res is', res))
+  //     // .then(res => this.setState({centers: res.data}))
+  //     .catch(err => console.log('An error occurred', err))
+  // }
 
   render() {
     return (
@@ -42,7 +42,7 @@ class App extends Component {
             <Route exact path='/' render={() => <Landing />} />
             {/* <Route path='/home' render={() => <Landing />} /> */}
             <Route path='/about' render={() => <About />} />
-            <Route path='/donate' render={() => <DonateContainer getCenters={this.getCenters} />} />
+            <Route path='/donate' render={() => <DonateContainer />} />
             {/* Only DonateContainer should be calling DonateList because that's the only way a search will have been performed */}
             {/* <Route path='/results' render={props => (<DonateList {...props} />)} /> */}
             <Route path='/login' render={() => <Login />} />
